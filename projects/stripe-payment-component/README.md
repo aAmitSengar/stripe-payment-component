@@ -47,6 +47,12 @@ import { SpModule, StripeScriptTag } from 'stripe-payment-component';
 })
 export class AppModule { }
 ```
+### Create card component using angular CLI
+```bash
+ng generate component card
+```
+
+
 
 *card.component.ts*
 ```bash
@@ -225,7 +231,7 @@ export class CardComponent implements OnInit {
 </div>
 
 ```
-*card.component.html*
+*card.component.css*
 ```bash
 .cardPay {
   /* background-color: #36323d; */
