@@ -8,19 +8,14 @@ import { APP_CONFIG, AppConfig } from '../settings/sp.config.module';
 
 
 @Injectable({ providedIn: 'root' }) export class StripeScriptTag {
-  src: string = "https://js.stripe.com/v3/"
-  Stripe: Stripe
-  StripeInstance: StripeInstance
-  load: Promise<any>
-  // keys: InjectionToken<IConfig>;
+  src: string = "https://js.stripe.com/v3/";
+  Stripe: Stripe;
+  StripeInstance: StripeInstance;
+  load: Promise<any>;
   constructor(@Inject(APP_CONFIG) private config: AppConfig) {
-    console.log("====================================");
-    console.log(config);
-
-    // this.keys = ConfigService;
-    this.load = this.injectIntoHead().then(st=>{
-      this.setPublishableKey(config.publishableKey, config.stripeOptions).then(st => {
-        console.log(st);
+     this.load = this.injectIntoHead().then(st=>{
+      this.setPublishableKey(config.publishableKey, config.stripeOptions).then(newst => {
+        console.log(newst);
       })
     })
 
