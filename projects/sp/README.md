@@ -22,7 +22,9 @@ npm install stripe-payment-component
 ```
 
 ### Example Usage
-**Creating a credit card token**
+**How to import**
+  *app.module.ts*
+
 ```bash 
 import { SpModule, StripeScriptTag } from 'stripe-payment-component';
 
@@ -40,6 +42,121 @@ import { SpModule, StripeScriptTag } from 'stripe-payment-component';
 })
 export class AppModule { }
 ```
+*app.component.ts*
+```bash
+import { Component } from '@angular/core';
+import { StripeScriptTag,StripeToken } from "stripe-payment-component";
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  private publishableKey: string = "pk_test_xxxx";
+  title = 'pay';
+  constructor(public StripeScriptTag: StripeScriptTag) {
+    this.StripeScriptTag.setPublishableKey(this.publishableKey)
+  }
+
+
+  onStripeInvalid(error: Error) {
+    console.log('Validation Error', error)
+  }
+
+  setStripeToken(token: StripeToken) {
+    console.log('Stripe token', token)
+  }
+
+  onStripeError(error: Error) {
+    console.error('Stripe error', error)
+  }
+}
+
+
+
+```
+
+**How to generate a Token using card**
+```bash
+import { Component, OnInit } from '@angular/core';
+import { StripeToken } from 'stripe-payment-component';
+
+@Component({
+  selector: 'app-card',
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.less']
+})
+export class CardComponent implements OnInit {
+  title = 'Pay by Card';
+  cardModel: any;
+  lastError: Error;
+  StyleOptions = {
+    iconStyle: "solid",
+    style: {
+      base: {
+        iconColor: "#fff",
+        color: "#000",
+        fontWeight: 400,
+        fontFamily: "Helvetica Neue, Helvetica, Arial, sans-serif",
+        fontSize: "16px",
+        fontSmoothing: "antialiased",
+
+        "::placeholder": {
+          color: "#BFAEF6"
+        },
+        ":-webkit-autofill": {
+          color: "#fce883"
+        }
+      },
+      invalid: {
+        iconColor: "#FFC7EE",
+        color: "#FFC7EE"
+      }
+    }
+  }
+  amount=1000;
+  constructor() { }
+
+  ngOnInit() {
+    this.lastError = new Error();
+    this.cardModel = {
+      address_city: "",
+      address_country: '',
+      address_line1: "",
+      address_state: "",
+      address_zip: "",
+      country: "",
+      name: "",
+      email: "",
+      phone: ""
+    }
+  }
+
+  onStripeInvalid(error: Error) {
+    this.lastError = error;
+    console.log('Validation Error', error)
+  }
+
+  setStripeToken(token: StripeToken) {
+    console.log('Stripe token', token)
+  }
+
+  onStripeError(error: Error) {
+    this.lastError = error;
+    console.error('Stripe error', error)
+  }
+  invalidError(error: Error) {
+    if (error) {
+      this.lastError = error;
+      console.error('Stripe error', error)
+    }
+  }
+}
+
+
+```
+
 
 # License
 
