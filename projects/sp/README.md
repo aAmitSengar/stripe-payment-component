@@ -1,10 +1,10 @@
 # Stripe Payment Component
 
-##Install
+## Install
 `npm i stripe-payment-component`
 
 
-#Introduction
+# Introduction
 This library is usefull while integrating Stripe payment components.
 ## Prerequisites
 
