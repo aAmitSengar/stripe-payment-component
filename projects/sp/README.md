@@ -22,8 +22,7 @@ npm install stripe-payment-component
 ```
 
 ### Example Usage
-**How to import**
-  *app.module.ts*
+*app.module.ts*
 
 ```bash 
 import { SpModule, StripeScriptTag } from 'stripe-payment-component';
