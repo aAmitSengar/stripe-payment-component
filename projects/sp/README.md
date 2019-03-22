@@ -1,24 +1,66 @@
-# Sp
+# Stripe Payment Component
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+##Install
+`npm i stripe-payment-component`
 
-## Code scaffolding
 
-Run `ng generate component component-name --project sp` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project sp`.
-> Note: Don't forget to add `--project sp` or else it will be added to the default project in your `angular.json` file. 
+#Introduction
+This library is usefull while integrating Stripe payment components.
+## Prerequisites
 
-## Build
+Both the CLI and generated project have dependencies that require Node 8.9 or higher, together
+with NPM 5.5.1 or higher.
 
-Run `ng build sp` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Publishing
+## Installation
 
-After building your library with `ng build sp`, go to the dist folder `cd dist/sp` and run `npm publish`.
+**BEFORE YOU INSTALL:** please read the [prerequisites](#prerequisites)
 
-## Running unit tests
+### Install 
+```bash
+npm install stripe-payment-component
+```
 
-Run `ng test sp` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Example Usage
+**Creating a credit card token**
+```bash 
+import { SpModule, StripeScriptTag } from 'stripe-payment-component';
 
-## Further help
+@NgModule({
+  declarations: [
+    ....
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    SpModule.forRoot({ publishableKey: 'pk_test_xxx', url: null })
+  ],
+  providers: [StripeScriptTag],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# License
+
+The MIT License (MIT)
+
+Copyright (c) 2013-2017 Amit Sengar
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
