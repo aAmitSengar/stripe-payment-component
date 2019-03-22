@@ -34,46 +34,18 @@ import { SpModule, StripeScriptTag } from 'stripe-payment-component';
   imports: [
     BrowserModule,
     FormsModule,
-    SpModule.forRoot({ publishableKey: 'pk_test_xxx', url: null })
+   SpModule.forRoot({
+      publishableKey: environment.stripeKey,
+      url: '',
+      accountToken: null,
+      apiEndpoint: '',
+      stripeOptions:{}
+    })
   ],
   providers: [StripeScriptTag],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-```
-*app.component.ts*
-```bash
-import { Component } from '@angular/core';
-import { StripeScriptTag,StripeToken } from "stripe-payment-component";
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-  private publishableKey: string = "pk_test_xxxx";
-  title = 'pay';
-  constructor(public StripeScriptTag: StripeScriptTag) {
-    this.StripeScriptTag.setPublishableKey(this.publishableKey)
-  }
-
-
-  onStripeInvalid(error: Error) {
-    console.log('Validation Error', error)
-  }
-
-  setStripeToken(token: StripeToken) {
-    console.log('Stripe token', token)
-  }
-
-  onStripeError(error: Error) {
-    console.error('Stripe error', error)
-  }
-}
-
-
-
 ```
 
 *card.component.ts*
