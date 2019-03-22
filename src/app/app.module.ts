@@ -7,6 +7,7 @@ import { SpModule, StripeScriptTag } from 'dist/stripe-payment-component';
 import { IdealBankComponent } from './ideal-bank/ideal-bank.component';
 import { CardComponent } from './card/card.component';
 import { IbanSourceComponent } from './iban-source/iban-source.component';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,13 @@ import { IbanSourceComponent } from './iban-source/iban-source.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    SpModule.forRoot({ publishableKey: 'pk_test_sc8WFVdBAx3EmrXyIsSQZrIj', url: null })
+    SpModule.forRoot({
+      publishableKey: environment.stripeKey,
+      url: '',
+      accountToken: null,
+      apiEndpoint: '',
+      stripeOptions:{}
+    })
   ],
   providers: [StripeScriptTag],
   bootstrap: [AppComponent]

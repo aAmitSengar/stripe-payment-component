@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StripeBankComponent } from './stripe-bank.component';
+import { IdealBankComponent } from './ideal-bank.component';
 
 describe('StripeBankComponent', () => {
-  let component: StripeBankComponent;
-  let fixture: ComponentFixture<StripeBankComponent>;
+  let component: IdealBankComponent;
+  let fixture: ComponentFixture<IdealBankComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StripeBankComponent ]
+      declarations: [ IdealBankComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StripeBankComponent);
+    fixture = TestBed.createComponent(IdealBankComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

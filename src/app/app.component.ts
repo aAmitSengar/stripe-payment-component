@@ -12,7 +12,7 @@ export class AppComponent {
   private publishableKey: string = "pk_test_sc8WFVdBAx3EmrXyIsSQZrIj";
   title = 'pay';
   constructor(public StripeScriptTag: StripeScriptTag) {
-    this.StripeScriptTag.setPublishableKey(this.publishableKey)
+    // this.StripeScriptTag.setPublishableKey(this.publishableKey)
   }
 
 

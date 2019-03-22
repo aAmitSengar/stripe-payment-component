@@ -11,7 +11,8 @@
           <label for="name">Name</label>
           <input id="name" name="name" [(ngModel)]="cardModel.name" required minlength="4" class="input" type="text"
             placeholder="Jane Doe" required autocomplete="name">
-          <div *ngIf="cardModel.name.invalid && (cardModel.name.dirty || cardModel.name.touched)" class="alert alert-danger">
+          <div *ngIf="cardModel.name.invalid && (cardModel.name.dirty || cardModel.name.touched)"
+            class="alert alert-danger">
             <div *ngIf="cardModel.name.errors.required">
               Name is required.
             </div>
@@ -24,13 +25,13 @@
       <div class="row">
         <div class="field">
           <label for="email">Email</label>
-          <input id="email" name="email" [(ngModel)]="cardModel.email" class="input" type="text" placeholder="janedoe@gmail.com"
-            required="" autocomplete="email">
+          <input id="email" name="email" [(ngModel)]="cardModel.email" class="input" type="text"
+            placeholder="janedoe@gmail.com" required="" autocomplete="email">
         </div>
         <div class="field">
           <label for="phone">Phone</label>
-          <input id="phone" class="input" name="phone" [(ngModel)]="cardModel.phone" type="text" placeholder="(941) 555-0123"
-            required="" autocomplete="tel">
+          <input id="phone" class="input" name="phone" [(ngModel)]="cardModel.phone" type="text"
+            placeholder="(941) 555-0123" required="" autocomplete="tel">
         </div>
       </div>
       <div data-locale-reversible>
@@ -54,8 +55,8 @@
           </div>
           <div class="field">
             <label for="zip">ZIP</label>
-            <input id="zip" class="input empty" name="zip" [(ngModel)]="cardModel.address_zip" type="text" placeholder="94107"
-              required="" autocomplete="postal-code">
+            <input id="zip" class="input empty" name="zip" [(ngModel)]="cardModel.address_zip" type="text"
+              placeholder="94107" required="" autocomplete="postal-code">
           </div>
         </div>
       </div>
@@ -68,6 +69,12 @@
             </lib-list-products>
             <!-- [(invalid)]="invalidError" -->
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <p>By clicking, you agree to <a href="#">our terms</a> and the <a href="/connect-account/legal">Stripe
+              Connected Account Agreement</a>.</p>
         </div>
       </div>
       <button type="submit">Pay {{amount/100 | currency}}</button>

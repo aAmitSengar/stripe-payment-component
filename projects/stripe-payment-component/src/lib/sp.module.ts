@@ -21,22 +21,23 @@ export { bank_account } from "./ideal-bank/ideal-bank.component";
 
 
 // first define an interface for our configuration
-export interface IConfig {
-  url: string,
-  publishableKey: string
-}
+// import { IConfig } from '../lib/interfaces/configuration';
+// export { IConfig } from '../lib/interfaces/configuration';
 
 // then define injectionToken
-export const ConfigService = new InjectionToken<IConfig>(
-  'Config'
-);
+// import { ConfigService } from './classes/config.service';
+// export { ConfigService } from './classes/config.service';
+import { APP_CONFIG, AppConfig } from './settings/sp.config.module'
+
+
 
 const declarations = [
   SpComponent,
   ListProductsComponent,
   // StripeCard,
   IdealBankComponent,
-  IbanElementComponent
+  IbanElementComponent,
+  // SpConfigModule
 ]
 const exportss = [
   SpComponent,
@@ -54,13 +55,13 @@ const imports = [CommonModule]
   exports: exportss
 })
 export class SpModule {
-  static forRoot(config: IConfig): ModuleWithProviders {
+  static forRoot(config: AppConfig): ModuleWithProviders {
     return {
       ngModule: SpModule,
       providers: [
         StripeScriptTag,
         {
-          provide: ConfigService,
+          provide: APP_CONFIG,
           useValue: config
         }
       ]

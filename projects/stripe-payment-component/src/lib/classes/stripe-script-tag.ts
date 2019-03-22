@@ -1,42 +1,49 @@
-import { Injectable } from "@angular/core"
+import { Injectable, Inject } from "@angular/core"
 
 import { Stripe } from "../interfaces/stripe-types"
 import { StripeInstance } from '../interfaces/sub/stripe-instance';
-// import { ConfigService } from '../sp.module'
+// import { IConfig } from '../interfaces/configuration';
+import { APP_CONFIG, AppConfig } from '../settings/sp.config.module';
+// import { ConfigService } from '../classes/config.service';
+
 
 @Injectable({ providedIn: 'root' }) export class StripeScriptTag {
   src: string = "https://js.stripe.com/v3/"
   Stripe: Stripe
   StripeInstance: StripeInstance
   load: Promise<any>
+  // keys: InjectionToken<IConfig>;
+  constructor(@Inject(APP_CONFIG) private config: AppConfig) {
+    console.log("====================================");
+    console.log(config);
 
-  constructor() {
+    // this.keys = ConfigService;
+    this.load = this.injectIntoHead().then(st=>{
+      this.setPublishableKey(config.publishableKey, config.stripeOptions).then(st => {
+        console.log(st);
+      })
+    })
 
-    this.load = this.injectIntoHead()
   }
 
   promiseStripe(): Promise<Stripe> {
     return this.load
   }
 
-  promiseInstance(): Promise<StripeInstance> {
-    return this.promiseStripe()
-      .then(stripe => {
-        if (!this.StripeInstance) {
-          const err = new Error("Stripe PublishableKey NOT SET. Use method StripeScriptTag.setPublishableKey()")
-          err["code"] = "STRIPEKEYNOTSET"
-          throw err
-          //return Promise.reject( err )
-        }
-        console.log("stripe init");
-
-
-        return this.StripeInstance
-      })
+  async promiseInstance(): Promise<StripeInstance> {
+    const string = await this.promiseStripe();
+    if (!this.StripeInstance) {
+      const err = new Error("Stripe PublishableKey NOT SET. Use method StripeScriptTag.setPublishableKey()");
+      err["code"] = "STRIPEKEYNOTSET";
+      throw err;
+      //return Promise.reject( err )
+    }
+    console.log("stripe init");
+    return this.StripeInstance;
   }
 
   setPublishableKey(
-    key: string,
+    key?: string,
     options?: any
   ): Promise<StripeInstance> {
     return this.load = this.load
