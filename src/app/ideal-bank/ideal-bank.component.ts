@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StripeIDEALSource } from 'dist/sp';
+import { StripeIDEALSource } from 'dist/stripe-payment-component';
 import { Router } from "@angular/router"
 
 

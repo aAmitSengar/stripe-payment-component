@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import { StripeScriptTag } from "dist/sp";
-import { StripeToken, StripeIDEALSource } from 'dist/sp';
+import { StripeToken, StripeIDEALSource } from 'dist/stripe-payment-component';
 
 @Component({
   selector: 'app-iban-source',

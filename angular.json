@@ -135,33 +135,33 @@
         }
       }
     },
-    "sp": {
-      "root": "projects/sp",
-      "sourceRoot": "projects/sp/src",
+    "stripe-payment-component": {
+      "root": "projects/stripe-payment-component",
+      "sourceRoot": "projects/stripe-payment-component/src",
       "projectType": "library",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/sp/tsconfig.lib.json",
-            "project": "projects/sp/ng-package.json"
+            "tsConfig": "projects/stripe-payment-component/tsconfig.lib.json",
+            "project": "projects/stripe-payment-component/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/sp/src/test.ts",
-            "tsConfig": "projects/sp/tsconfig.spec.json",
-            "karmaConfig": "projects/sp/karma.conf.js"
+            "main": "projects/stripe-payment-component/src/test.ts",
+            "tsConfig": "projects/stripe-payment-component/tsconfig.spec.json",
+            "karmaConfig": "projects/stripe-payment-component/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/sp/tsconfig.lib.json",
-              "projects/sp/tsconfig.spec.json"
+              "projects/stripe-payment-component/tsconfig.lib.json",
+              "projects/stripe-payment-component/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

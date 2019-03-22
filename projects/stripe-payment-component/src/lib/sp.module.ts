@@ -1,6 +1,6 @@
 import { NgModule, InjectionToken, ModuleWithProviders } from '@angular/core';
 import { SpComponent } from './sp.component';
-import { SpService } from './sp.service';
+// import { SpService } from './sp.service';
 import { ListProductsComponent } from './list-products/list-products.component'
 import { CommonModule } from "@angular/common";
 

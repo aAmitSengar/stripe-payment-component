@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { StripeScriptTag } from "dist/sp";
-import { StripeToken } from 'dist/sp';
+import { StripeScriptTag } from "dist/stripe-payment-component";
+import { StripeToken } from 'dist/stripe-payment-component';
 
 
 @Component({

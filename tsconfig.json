@@ -20,10 +20,10 @@
     ],
     "paths": {
       "sp": [
-        "dist/sp"
+        "dist/stripe-payment-component"
       ],
       "sp/*": [
-        "dist/sp/*"
+        "dist/stripe-payment-component/*"
       ]
     }
   }
