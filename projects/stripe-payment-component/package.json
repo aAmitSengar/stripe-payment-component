@@ -1,6 +1,6 @@
 {
   "name": "stripe-payment-component",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": {
     "email": "amitsengar@yahoo.com",
     "name": "Amit Sengar",
@@ -16,7 +16,7 @@
   },
   "categories": ["Extension Packs", "Programming Languages"],
   "displayName": "Stripe Payment components for Angular",
-  "keywords": ["stripe Payment", "angular", "stripe component", "payment"],
+  "keywords": ["stripe Payment", "angular", "stripe component", "payment","angular-stripe","typescript"],
   "license": "MIT",
   "publisher": "@amitsengar",
   "peerDependencies": {
