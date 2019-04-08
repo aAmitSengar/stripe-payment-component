@@ -1,7 +1,14 @@
 # Stripe Payment Component
 
+This library provides a simple way to integrate Stripe payments.
+if you want to collaborate  then please rise PR request or file issue.
+
+
+
+
 ## Install
 `npm i stripe-payment-component`
+`yarn add stripe-payment-component`
 
 
 # Introduction
