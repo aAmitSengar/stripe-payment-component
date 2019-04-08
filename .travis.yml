@@ -12,20 +12,7 @@ script:
 # - npm run test
 - npm run lib
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  local-dir: dist/stripe-payment-component
-  on:
-    branch: master
-
-git:
-  depth: 3
-
-after_success:
-  - npm run travis-deploy-once "npm run semantic-release"
-
-branches:
-  except:
-    - /^v\d+\.\d+\.\d+$/
+  deploy:
+  provider: npm
+  email: "amitsengar@yahoo.com"
+  api_key: $NPM_API_KEY
