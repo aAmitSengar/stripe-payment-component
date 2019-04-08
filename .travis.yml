@@ -29,3 +29,4 @@ deploy:
   on:
     repo: aAmitSengar/stripe-payment-component
     tags: true
+    all_branches: true
