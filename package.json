@@ -52,7 +52,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aAmitSengar/stripe-payment.git"
+    "url": "git+https://github.com/aAmitSengar/stripe-payment-component.git"
   },
   "author": {
     "name": "Amit Sengar",
@@ -62,7 +62,7 @@
   "contributors": [],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aAmitSengar/stripe-payment/issues"
+    "url": "https://github.com/aAmitSengar/stripe-payment-component/issues"
   },
   "keywords": ["stripe Payment", "angular", "stripe component", "payment", "angular-stripe", "typescript"]
 }
