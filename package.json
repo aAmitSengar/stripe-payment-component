@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "lib": "ng build --project=stripe-payment-component",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -48,5 +49,20 @@
     "tslib": "^1.9.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aAmitSengar/stripe-payment.git"
+  },
+  "author": {
+    "name": "Amit Sengar",
+    "email": "amitsengar@yahoo.com",
+    "url": "https://github.com/aAmitSengar"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aAmitSengar/stripe-payment/issues"
+  },
+  "keywords": ["stripe Payment", "angular", "stripe component", "payment", "angular-stripe", "typescript"]
 }
