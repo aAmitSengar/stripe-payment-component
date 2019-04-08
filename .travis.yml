@@ -14,8 +14,7 @@ before_deploy:
 - cd dist/stripe-payment-component
 
 deploy:
-  provider: npm
-  email: "amitsengar@yahoo.com"
-  api_key: "b01a340a-a5f8-4a34-b8f8-ef0d98933bc9"
+  provider: releases
+  skip_cleanup: true
   on:
     tags: true
