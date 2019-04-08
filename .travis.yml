@@ -11,6 +11,9 @@ cache:
 script:
 # - npm run test
 - npm run lib
+
+before_deploy:
+  cd dist/stripe-payment-component
 deploy:
   deploy:
   provider: npm
