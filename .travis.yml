@@ -19,4 +19,3 @@ deploy:
   api_key: "b01a340a-a5f8-4a34-b8f8-ef0d98933bc9"
   on:
     tags: true
-    repo: https://github.com/aAmitSengar/stripe-payment.git
