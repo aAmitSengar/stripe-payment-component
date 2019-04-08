@@ -1,4 +1,5 @@
-# Stripe Payment Component with Angular JS [![Build Status](https://travis-ci.org/aAmitSengar/stripe-payment.svg?branch=master)](https://travis-ci.org/aAmitSengar/stripe-payment) ![npm](https://img.shields.io/npm/dw/stripe-payment-component.svg)
+# Stripe Payment Component with Angular JS
+[![Build Status](https://travis-ci.org/aAmitSengar/stripe-payment.svg?branch=master)](https://travis-ci.org/aAmitSengar/stripe-payment) ![npm](https://img.shields.io/npm/dw/stripe-payment-component.svg)
 
 `git clone https://github.com/aAmitSengar/stripe-payment.git`
 
