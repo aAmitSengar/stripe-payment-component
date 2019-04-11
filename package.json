@@ -64,5 +64,5 @@
   "bugs": {
     "url": "https://github.com/aAmitSengar/stripe-payment-component/issues"
   },
-  "keywords": ["stripe Payment", "angular", "stripe component", "payment", "angular-stripe", "typescript"]
+  "keywords": ["stripe Payment", "angular6", "stripe component", "payment", "angular-stripe", "typescript"]
 }
