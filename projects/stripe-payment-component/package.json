@@ -4,7 +4,7 @@
   "author": {
     "email": "amitsengar@yahoo.com",
     "name": "Amit Sengar",
-    "url": "https://github.com/aAmitSengar/stripe-payment/tree/master/projects/sp"
+    "url": "https://aamitsengar.github.io/stripe-payment-component"
   },
   "bugs": {
     "email": "amitsengar@yahoo.com",
@@ -15,8 +15,8 @@
     "url": "https://github.com/aAmitSengar/stripe-payment.git"
   },
   "categories": ["Extension Packs", "Programming Languages"],
-  "displayName": "Stripe Payment components for Angular",
-  "keywords": ["stripe Payment", "angular", "stripe component", "payment","angular-stripe","typescript"],
+  "displayName": "Stripe Payment components for Angular6",
+  "keywords": ["stripe Payment", "angular6", "stripe component", "payment","angular-stripe","typescript"],
   "license": "MIT",
   "publisher": "@amitsengar",
   "peerDependencies": {
