@@ -1,6 +1,7 @@
 # Stripe Payment Component with Angular JS
 [![Build Status](https://travis-ci.org/aAmitSengar/stripe-payment-component.svg?branch=master)](https://travis-ci.org/aAmitSengar/stripe-payment-component) ![npm](https://img.shields.io/npm/dw/stripe-payment-component.svg)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/stripe-payment-component.svg)
+[![Go Report Card](https://goreportcard.com/badge/github.com/exoscale/cli)](https://goreportcard.com/report/github.com/exoscale/cli)
 
 `git clone https://github.com/aAmitSengar/stripe-payment-component.git`
 
