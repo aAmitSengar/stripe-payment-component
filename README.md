@@ -1,6 +1,5 @@
 # Stripe Payment Component with Angular JS
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a35aee2aecd8403a9d9e67748d6fe908)](https://app.codacy.com/app/aAmitSengar/stripe-payment-component?utm_source=github.com&utm_medium=referral&utm_content=aAmitSengar/stripe-payment-component&utm_campaign=Badge_Grade_Dashboard)
-
 ![npm bundle size](https://img.shields.io/bundlephobia/min/stripe-payment-component.svg)
 
 
